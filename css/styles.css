@@ -166,3 +166,10 @@ a:hover {
   font-family: 'Montserrat', sans-serif;
   padding : 20px 0px;
 }
+
+
+.skills-p {
+  margin: auto;
+  width: fit-content;
+  color: #781D42;
+}
