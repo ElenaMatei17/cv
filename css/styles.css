@@ -4,15 +4,30 @@ body {
   font-family: 'Merriweather Sans', sans-serif;
 }
 
+.nav {
+  padding-top: 50px;
+  text-align: center;
+
+}
+
+.nav-link {
+  padding-right: 3rem;
+  list-style: none;
+  color: #C37B89;
+  text-decoration: none;  
+  font-family: 'Merriweather Sans', sans-serif;
+  font-size: 1.2rem;
+}
+
 h1 {
-  color: #F2789F;
+  color: #DCA06D;
   font-size: 7.625rem;
   margin: 50px auto 0 auto;
   font-family: 'Sacramento', cursive;
 }
 
 h2 {
-  color: #C37B89;
+  color: #DCA06D;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.8rem;
   font-weight: normal;
@@ -50,10 +65,9 @@ h3 {
 }
 
 .top-container {
-  background:#FEE3EC;
+  background:#210F37;
   position: relative;
-  padding-top: 100px;
-  height:90vh;
+  height:100vh;
 
 
 }
@@ -77,9 +91,9 @@ h3 {
 
 .me {
   position: absolute;
-  right: 100px;
+  right: 10px;
   top: 200px;
-  height: 500px;
+  height: 900px;
 }
 
 
