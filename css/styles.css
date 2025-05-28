@@ -7,6 +7,7 @@ body {
 .nav {
   padding-top: 50px;
   text-align: center;
+  padding-bottom: 100px;
 
 }
 
@@ -124,6 +125,78 @@ h3 {
   margin: 30px;
 }
 
+.carouselUl{
+  width: 100vw;
+  height: 50vw;
+  padding: 20px;
+  display: flex;
+  gap: 4vw;
+
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+ul::scroll-button(left) {
+  content: "◄";
+}
+
+ul::scroll-button(right) {
+  content: "►";
+}
+
+ul::scroll-button(*) {
+  border: 0;
+  font-size: 2rem;
+  background: none;
+  color: rgb(0 0 0 / 0.7);
+  cursor: pointer;
+}
+
+ul::scroll-button(*):hover,
+ul::scroll-button(*):focus {
+  color: rgb(0 0 0 / 1);
+}
+
+ul::scroll-button(*):active {
+  translate: 1px 1px;
+}
+
+ul::scroll-button(*):disabled {
+  color: rgb(0 0 0 / 0.2);
+  cursor: unset;
+}
+
+ul {
+  anchor-name: --myCarousel;
+}
+
+ul::scroll-button(*) {
+  position: absolute;
+  position-anchor: --myCarousel;
+}
+
+ul::scroll-button(left) {
+  right: calc(anchor(left) - 200px);
+  bottom: calc(anchor(top) - 500px);
+}
+
+ul::scroll-button(right) {
+  left: calc(anchor(right) - 200px);
+  bottom: calc(anchor(top) - 500px);
+}
+
+.carouselUl > li {
+ list-style-type: none;
+
+  flex: 0 0 100%;
+
+  scroll-snap-align: center;
+}
+
+.carouselUl > img {
+  height: 50%;;
+}
+
 .contact-me {
   margin-bottom: 100px;
   margin-top: 100px;
@@ -186,4 +259,105 @@ a:hover {
   margin: auto;
   width: fit-content;
   color: #781D42;
+}
+
+
+
+.btn-25,
+.btn-25 *,
+.btn-25 :after,
+.btn-25 :before,
+.btn-25:after,
+.btn-25:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn-25 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 70%;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+  margin-right: 50px;
+}
+.btn-25:disabled {
+  cursor: default;
+}
+.btn-25:-moz-focusring {
+  outline: auto;
+}
+.btn-25 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn-25 [hidden] {
+  display: none;
+}
+.btn-25 {
+  --background: #4F1C51;
+  background: none;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+.btn-25 span {
+  display: block;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+.btn-25:after,
+.btn-25:before {
+  --tilt: 20px;
+  background: #210F37;
+  -webkit-clip-path: polygon(0 50%, 0 0, 100% 0, 100% 50%, 100% 100%, 0 100%);
+  clip-path: polygon(0 50%, 0 0, 100% 0, 100% 50%, 100% 100%, 0 100%);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: -webkit-clip-path 0.2s ease;
+  transition: clip-path 0.2s ease;
+  transition: clip-path 0.2s ease, -webkit-clip-path 0.2s ease;
+  width: 100%;
+  z-index: -1;
+}
+.btn-25:after {
+  --thickness: 5px;
+  background: var(--background);
+  height: calc(100% - var(--thickness) * 2);
+  left: var(--thickness);
+  top: var(--thickness);
+  width: calc(100% - var(--thickness) * 2);
+}
+.btn-25:hover:after,
+.btn-25:hover:before {
+  -webkit-clip-path: polygon(
+    0 50%,
+    var(--tilt) 0,
+    calc(100% - var(--tilt)) 0,
+    100% 50%,
+    calc(100% - var(--tilt)) 100%,
+    var(--tilt) 100%
+  );
+  clip-path: polygon(
+    0 50%,
+    var(--tilt) 0,
+    calc(100% - var(--tilt)) 0,
+    100% 50%,
+    calc(100% - var(--tilt)) 100%,
+    var(--tilt) 100%
+  );
 }
