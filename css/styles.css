@@ -42,6 +42,15 @@ a {
   color: #A5584B;              /* warm brown */
 }
 
+@media (max-width: 480px) {
+  .nav {
+    right: 10px;    /* mai ales dacă înainte era fix 20px */
+  }
+  .nav ul {
+    gap: 0.75rem;   /* reducem ușor spațiul între link-uri, ca să încapă toate pe un singur rând */
+  }
+}
+
 /* ANIMATION: FADE-UP */
 .fade-up {
   opacity: 0;
@@ -102,6 +111,22 @@ a {
   height: auto;
   margin: 0;                 
 }
+
+@media (max-width: 480px) {
+  .hero-text {
+    text-align: center;
+    margin-bottom: 1.5rem; /* să fie un pic de spațiu înainte de avatar */
+  }
+  .hero-text h1 {
+    font-size: 3rem;   /* mai mic decât 4rem de pe desktop, ca să nu iasă în afară */
+  }
+  .hero-text h2 {
+    font-size: 1.2rem; /* mai mic pentru subtitlu */
+  }
+}
+
+
+
 
 /*  MIDDLE CONTAINER */
 .middle-container {
@@ -230,52 +255,74 @@ background: radial-gradient(circle,rgba(220, 160, 109, 1) 31%, rgba(165, 91, 75,
   font-family: 'Montserrat', sans-serif;
 }
 
-/* ===== Diplomas Carousel with Arrows ===== */
+/* =========================
+   DIPLOMAS CAROUSEL STYLES
+   ========================= */
+
+/* Containerul principal al secțiunii */
 .diploms {
   max-width: 900px;
   margin: 0 auto;
   padding: 4rem 1rem;
 }
+
 .diploms h2 {
   text-align: center;
   color: #DCA06D;
   margin-bottom: 2rem;
+  font-family: 'Montserrat', sans-serif;
 }
+
+/* Wrapper-ul caruselului (ascunde overflow până la imaginile scrollabile) */
 .carousel-wrapper {
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
+
+/* Lista cu diplome – bandă orizontală scrollabilă */
 .carouselUl {
   display: flex;
-  gap: 5rem;
+  gap: 5rem;                   /* spațiu între diplome pe desktop */
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  padding: 0;
+  padding: 0 1rem;             /* padding lateral, ca să nu lipești imaginea de margine */
   margin: 0;
+  list-style: none;
 }
+
+/* Fiecare element <li> se aliniază la centru când faci "snap" */
 .carouselUl li {
   flex: 0 0 auto;
   scroll-snap-align: center;
 }
+
+/* Imaginea din fiecare <li> */
 .carouselUl img {
-  max-height: 700px;   
+  max-height: 700px;           /* limită înălțime pe desktop */
   width: auto;
   border-radius: 4px;
   display: block;
   margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 /* Ascundem scrollbar-ul nativ */
-.carouselUl::-webkit-scrollbar { display: none; }
-.carouselUl { scrollbar-width: none; -ms-overflow-style: none; }
+.carouselUl::-webkit-scrollbar {
+  display: none;
+}
+.carouselUl {
+  scrollbar-width: none;   /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
 
 /* Săgeți de navigare */
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   color: #fff;
   border: none;
   font-size: 1.5rem;
@@ -285,13 +332,79 @@ background: radial-gradient(circle,rgba(220, 160, 109, 1) 31%, rgba(165, 91, 75,
   cursor: pointer;
   z-index: 10;
   transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.carousel-btn.left { left: 0.5rem; }
-.carousel-btn.right { right: 0.5rem; }
+.carousel-btn.left {
+  left: 0.5rem;
+}
+.carousel-btn.right {
+  right: 0.5rem;
+}
 .carousel-btn:hover {
   background: rgba(0,0,0,0.8);
 }
 
+/* ===============================================
+   MEDIA QUERY PENTRU TABLETĂ ȘI TELEFOANE (≤768px)
+   =============================================== */
+@media (max-width: 768px) {
+  .diploms {
+    padding: 3rem 1rem;
+  }
+  .diploms h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  /* Pe tablete și telefoane, mai micim gap-ul dintre imagini */
+  .carouselUl {
+    gap: 2rem;
+    padding: 0 0.5rem;
+  }
+  /* Limităm înălțimea imaginilor */
+  .carouselUl img {
+    max-height: 350px;
+  }
+  /* Butoanele devin puțin mai mici */
+  .carousel-btn {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1.2rem;
+  }
+  .carousel-btn.left {
+    left: 0.25rem;
+  }
+  .carousel-btn.right {
+    right: 0.25rem;
+  }
+}
+
+/* ===================================================
+   MEDIA QUERY PENTRU TELEFOANE FOARTE MICI (≤480px)
+   =================================================== */
+@media (max-width: 480px) {
+  .diploms {
+    padding: 2rem 0.5rem;
+  }
+  .diploms h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  /* Pe telefoane mici, imaginile să nu fie mai mari de 200px înaltă */
+  .carouselUl img {
+    max-height: 200px;
+  }
+  /* Gap și padding lateral chiar și mai mici */
+  .carouselUl {
+    gap: 1rem;
+    padding: 0 0.25rem;
+  }
+  /* Ascundem complet butoanele de navigare, lăsăm utilizatorul să dea swipe cu degetul */
+  .carousel-btn {
+    display: none;
+  }
+}
 
 
 .copyright {
