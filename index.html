@@ -1,112 +1,115 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Elena Matei</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon" href="favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elena Matei • Portfolio</title>
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="/css/styles.css">
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,300&family=Montserrat:wght@200&family=Sacramento&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,300&family=Montserrat:wght@200;600&family=Sacramento&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <div class="top-container">
 
-    <div class="nav">
-     <button class="btn-25"><span></span> <a class="nav-link" href="https://www.linkedin.com/in/elena-matei-fullstack/">LinkedIn</a></span></button>
-      <button class="btn-25"><span></span> <a class="nav-link" href="#diplomas_id">My Diplomas</a></span></button>
-     <!-- <button class="btn-25"><span></span> <a class="nav-link" href="proiects.html">My Proiects</a></span></button>  --> 
-      <button class="btn-25"><span></span> <a class="nav-link" href="files/Elena_AdrianaMatei_Resume.pdf" download="Elena_AdrianaMatei_Resume">Download my CV</a></span></button>
+  <!-- Navbar -->
+  <header class="nav">
+    <ul>
+      <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </header>
+
+  <!-- Hero Section -->
+  <div class="top-container fade-up" style="--delay:0s">
+    <div class="hero-text">
+      <h1>Hi,</h1>
+      <h1>I'm Elena</h1>
+      <h2>a Junior Full-Stack Web Developer</h2>
+      <a href="#contact" class="btn-contact">Contact Me</a>
     </div>
-
-    <h1 class="elena">Hi,</h1>
-    <h1 class="elena">I'm Elena</h1>
-    <h2 class="elena">a Junior Full-Stack Web Developer (in Ausbildung)</h2>
-    <img class="me"src="images/me-avatar.png" alt="me">
+    <div class="hero-avatar">
+      <img src="images/avatar.png" alt="Elena avatar" class="me">
+    </div>
   </div>
 
+  <!-- Main Content -->
+  <div class="middle-container">
 
-  <div class="middle-container"> 
-
-    <div class="profile">
-      <img class="me-img"src="images/bee.png" alt="me" width="200px">
-      <h2>Hello.</h2>
-       <h3 class="about-me">
-        I’m based in Frankfurt, Germany, and currently in my final year of vocational training as an IT Specialist in Application Development.
-        Just like a bee, I'm hardworking, focused, and always exploring new ideas. I'm passionate about web technologies and love building accessible,
-        responsive, and smart digital solutions.
-      </h3>
-    </div>
-    <br />
-    <hr class="line">
-    <div class="skills">
-     <h2>What I'm looking for</h2>
-     <p class="	skills-p">
-        I’m looking for a full-time position as a Junior Web Developer where I can grow, contribute, and learn from a professional team. <br>
-        I’m especially interested in remote opportunities that allow me to continue developing my skills in modern web technologies, 
-        both on the frontend and backend.
-      </p>
-      <div class="skill-row">
-        <img class="skills-img" src="images/1.png" alt="skills" width="200px">
-         <h3>Web Development & CMS</h3>
-        <p class="	skills-p">
-          During my Ausbildung at Pagemachine AG, I’ve gained hands-on experience with TYPO3 (v10–v12), PHP, SASS, TypoScript, and responsive front-end design using
-          HTML, CSS, and Bootstrap. I work in real client projects, update and build extensions, and contribute to web systems in production.
-        </p>
+    <!-- About Me Card -->
+    <section id="about" class="about-section fade-up" style="--delay:0.2s">
+      <div class="about-img">
+        <img src="images/bee.png" alt="Bee illustration">
       </div>
-      <div class="skill-row">
-        <img class="develop-img" src="images/aaa.png" alt="clean" width="200px">
-        <h3>Modern Tools & Growth</h3>
-        <p class="	skills-p">
-          I'm constantly learning! My recent project is an Android app built in Flutter for visually impaired users, combining image recognition and
-          text-to-speech. I’m also exploring React, Node.js, and JavaScript deeply, and have completed courses from IBM and Meta on Coursera.
-          I’m driven, adaptable, and always ready for new challenges.
-        </p>
-    </div>
-    <hr class="line">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>I’m based in Frankfurt, Germany, in my final year of vocational training as an IT Specialist in Application Development. Like a bee, I’m hardworking, focused, and always exploring new ideas. I build accessible, responsive, and smart digital solutions.</p>
+      </div>
+    </section>
 
-<div id="diplomas_id" class="diploms">
-     <h2>My Diplomas</h2>
-      <ul class="carouselUl">
-        <li>
-          <img src="images/coursera1.png" alt="Diplom IBM">
-        </li>
-        <li>
-          <img src="images/coursera2.png" alt="Diplom Meta">
-        </li>
-        <li>
-          <img src="images/coursera3.png" alt="Diplom IMB">
-        </li>
-        <li>
-         <img src="images/coursera4.png" alt="Diplom IMB">
-        </li>
-      </ul>
-    </div>
+    <!-- Technical Skills Bars -->
+    <section class="skills-bar-section fade-up" style="--delay:0.4s">
+      <h2>Technical Skills</h2>
+      <div class="skill-bar" style="--delay:0.5s">
+        <span class="skill-name">HTML & CSS</span>
+        <div class="bar"><div class="fill" style="width:70%;"></div></div>
+      </div>
+      <div class="skill-bar" style="--delay:0.6s">
+        <span class="skill-name">JavaScript</span>
+        <div class="bar"><div class="fill" style="width:40%;"></div></div>
+      </div>
+      <div class="skill-bar" style="--delay:0.7s">
+        <span class="skill-name">PHP & TYPO3</span>
+        <div class="bar"><div class="fill" style="width:70%;"></div></div>
+      </div>
+      <div class="skill-bar" style="--delay:0.8s">
+        <span class="skill-name">Flutter</span>
+        <div class="bar"><div class="fill" style="width:20%;"></div></div>
+      </div>
+    </section>
 
-    <div class="contact-me">
-      <h2>Let’s connect</h2>
-      <h3 class="free">
-        Are you hiring a motivated junior developer who’s eager to learn and contribute to meaningful projects? 
-        I’d love to become part of a team where I can grow professionally and support your digital goals.
-      </h3>
-      <a class="btn" href="mailto:mateielena.mea@gmail.com">CONTACT ME</a>
+    <!-- Hobbies & Interests -->
+    <section class="hobbies-section fade-up" style="--delay:1s">
+      <h2>Hobbies & Interests</h2>
+      <div class="hobby-card">
+        <img src="images/icon-crochet.png" alt="Crochet icon">
+        <p>Crocheting</p>
+      </div>
+      <div class="hobby-card">
+        <img src="images/icon-gamepad.png" alt="Gaming icon">
+        <p>Playing Games</p>
+      </div>
+      <div class="hobby-card">
+        <img src="images/icon-walk.png" alt="Walking icon">
+        <p>Long Walks</p>
+      </div>
+    </section>
 
-    </div>
+    <!-- Diplomas Carousel -->
+    <section id="portfolio" class="diploms">
+  <h2>My Diplomas</h2>
+  <div class="carousel-wrapper">
+    <button class="carousel-btn left" aria-label="Scroll Left">◀</button>
+    <ul class="carouselUl">
+      <li><img src="images/coursera1.png" alt="IBM Certificate"></li>
+      <li><img src="images/coursera2.png" alt="Meta Certificate"></li>
+      <li><img src="images/coursera3.png" alt="IBM Full Stack Certificate"></li>
+      <li><img src="images/coursera4.png" alt="Another Certificate"></li>
+    </ul>
+    <button class="carousel-btn right" aria-label="Scroll Right">▶</button>
   </div>
+</section>
 
   </div>
 
 
 
   <div class="bottom-container">
-    <a class="a" href="https://www.linkedin.com/in/elena-matei-fullstack/">LinkedIn</a>
-  
-    <p class="copyright">© 2021 Matei Elena.</p>
+    <p class="copyright">© 2025 Matei Elena.</p>
   </div>
 
 
 </body>
-
 </html>
