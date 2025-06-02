@@ -111,5 +111,30 @@
   </div>
 
 
+   <!-- JS for animating skill bars on load -->
+  <script>
+    document.querySelectorAll('.skill-bar').forEach((bar, i) => {
+      setTimeout(() => {
+        const fill = bar.querySelector('.fill');
+        fill.style.width = fill.style.width;
+        fill.style.opacity = '1';
+      }, 600 + i * 100);
+    });
+  </script>
+
+  <script>
+  const carousel = document.querySelector('.carouselUl');
+  document.querySelector('.carousel-btn.left')
+    .addEventListener('click', () => {
+      carousel.scrollBy({ left: -carousel.offsetWidth * 0.8, behavior: 'smooth' });
+    });
+  document.querySelector('.carousel-btn.right')
+    .addEventListener('click', () => {
+      carousel.scrollBy({ left: carousel.offsetWidth * 0.8, behavior: 'smooth' });
+    });
+</script>
+
+
+
 </body>
 </html>
