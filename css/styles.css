@@ -131,7 +131,8 @@ background: radial-gradient(circle,rgba(220, 160, 109, 1) 31%, rgba(165, 91, 75,
   border-radius: 12px;
   padding: 4px;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          -webkit-mask-composite: xor;
           mask-composite: exclude;
   pointer-events: none;
 }
@@ -297,7 +298,7 @@ background: radial-gradient(circle,rgba(220, 160, 109, 1) 31%, rgba(165, 91, 75,
   text-align: center;
   padding: 1rem;
   background-color: #210F37;
-  color: white;              
+  color: white;              /* peach */
   font-family: 'Montserrat', sans-serif;
 }
 
