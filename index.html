@@ -10,17 +10,40 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,300&family=Montserrat:wght@200;600&family=Sacramento&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
 <body>
 
   <!-- Navbar -->
-  <header class="nav">
-    <ul>
-      <li><a href="https://www.linkedin.com/in/elena-matei-fullstack/" class="nav-link">LinkedIn</a></li>
-      <li><a href="files/Elena_AdrianaMatei_Resume.pdf" download class="nav-link">Download my CV</a></li>
-      <li><a href="mailto:matei.elenamea@gmail.com" class="nav-link">Contact me</a></li>
-    </ul>
-  </header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">EM</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="LinkedIn" href="https://www.linkedin.com/in/elena-matei-fullstack/">LinkedIn</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mailto:matei.elenamea@gmail.com">Contact me</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Download my CV
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="files/Elena_Matei_Resume.pdf" download class="nav-link">Download my CV</a></li>
+            <li><a href="files/Elena_Matei_Bewerbung.pdf" download class="nav-link">Mein Lebenslauf herunterladen</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
 
   <!-- Hero Section -->
   <div class="top-container fade-up" style="--delay:0s">
@@ -45,29 +68,45 @@
       </div>
       <div class="about-text">
         <h2>About Me</h2>
-        <p>I’m based in Frankfurt, Germany, in my final year of vocational training as an IT Specialist in Application Development. Like a bee, I’m hardworking, focused, and always exploring new ideas. I build accessible, responsive, and smart digital solutions.</p>
+        <p>Frontend-focused Fullstack Developer with 3 years of hands-on experience at Pagemachine, delivering
+              enterprise web solutions for clients such as TÜV Hessen, Hochschule Mannheim, and GEW Hessen. Skilled in
+              modern frontend technologies including HTML, CSS, JavaScript (ES6+), TypeScript, React, Vue.js, and
+              Bootstrap, with foundational backend knowledge in PHP, Symfony, Node.js, and SQL/MariaDB. Experienced in
+              CMS development (TYPO3), responsive UI implementation, REST API integration, and CI/CD workflows.
+              Completed dual vocational training as an IT Specialist for Application Development in Germany and
+              continuously upskill through platforms like Udemy and Coursera. Passionate about clean, accessible code,
+              performance optimization, and open to working with and learning other modern frameworks such as Angular.
+</p>
       </div>
     </section>
 
     <!-- Technical Skills Bars -->
-    <section class="skills-bar-section fade-up" style="--delay:0.4s">
-      <h2>Technical Skills</h2>
-      <div class="skill-bar" style="--delay:0.5s">
-        <span class="skill-name">HTML & CSS</span>
-        <div class="bar"><div class="fill" style="width:70%;"></div></div>
+    <section class="skills">
+      <div class="container text-center">
+        <div class="row row-cols-5">
+          <div class="frontend-skill">
+            <h1>Frondend Development</h1>
+            <p>HTML5, CSS3 (Flexbox, Grid, Sass/Less), JavaScript(ES6+), TypeScript, React, Vue.js , Bootstrap 5, jQuery, Responsive Design, Accessibility (WCAG 2.1)</p>
+          </div>
+          <div class="backend-skill">
+            <h1>Backend Development</h1>
+            <p>PHP, Symfony, Node.js, Express.js, REST APIs, API Platform, Doctrine ORM, MySQL, MariaDB,PostgreSQL, SQL</p>
+          </div>
+          <div class="tools-skill">
+            <h1>Tools & Workflows</h1>
+            <p>Git, GitLab CI/CD, Composer, NPM, Yarn, Webpack, Symfony Encore, Docker, Ubuntu CLI, Renovate, Linting, Jira, Kanban, Agile/Scrum</p>
+          </div>
+          <div class="testing-skill">
+            <h1>Testing</h1>
+            <p>Jest, Cypress, PHPUnit, Codeception</p>
+          </div>
+          <div class="design-skill">
+            <h1>Design & Collaboration</h1>
+            <p>Figma, Chrome DevTools, Code Review, Cross-browser Testing, Performance Optimization</p>
+          </div>
+        </div>
       </div>
-      <div class="skill-bar" style="--delay:0.6s">
-        <span class="skill-name">JavaScript</span>
-        <div class="bar"><div class="fill" style="width:40%;"></div></div>
-      </div>
-      <div class="skill-bar" style="--delay:0.7s">
-        <span class="skill-name">PHP & TYPO3</span>
-        <div class="bar"><div class="fill" style="width:70%;"></div></div>
-      </div>
-      <div class="skill-bar" style="--delay:0.8s">
-        <span class="skill-name">Flutter</span>
-        <div class="bar"><div class="fill" style="width:20%;"></div></div>
-      </div>
+
     </section>
 
     <!-- Hobbies & Interests -->
@@ -134,6 +173,7 @@
       carousel.scrollBy({ left: carousel.offsetWidth * 0.8, behavior: 'smooth' });
     });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 
 
 

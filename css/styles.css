@@ -21,35 +21,7 @@ a {
   color: inherit;
 }
 
-/* NAVBAR */
-.nav {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 10;
-}
-.nav ul {
-  display: flex;
-  gap: 1rem;
-}
-.nav-link {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: #DCA06D;              /* peach */
-  transition: color 0.2s ease;
-}
-.nav-link:hover {
-  color: #A5584B;              /* warm brown */
-}
 
-@media (max-width: 480px) {
-  .nav {
-    right: 10px;    /* mai ales dacă înainte era fix 20px */
-  }
-  .nav ul {
-    gap: 0.75rem;   /* reducem ușor spațiul între link-uri, ca să încapă toate pe un singur rând */
-  }
-}
 
 /* ANIMATION: FADE-UP */
 .fade-up {
@@ -95,7 +67,7 @@ a {
 .btn-contact {
   display: inline-block;
   padding: 0.6rem 1.2rem;
-  background-color: #A5584B;   /* warm brown */
+  background-color: #A5584B;  
   color: #ffffff;
   border-radius: 999px;
   font-family: 'Montserrat', sans-serif;
@@ -104,7 +76,7 @@ a {
   transition: background-color 0.3s ease;
 }
 .btn-contact:hover {
-  background-color: #4E1C51;   /* mid purple */
+  background-color: #4E1C51;  
 }
 .hero-avatar .me {
   width: 80%;                
@@ -115,13 +87,13 @@ a {
 @media (max-width: 480px) {
   .hero-text {
     text-align: center;
-    margin-bottom: 1.5rem; /* să fie un pic de spațiu înainte de avatar */
+    margin-bottom: 1.5rem; 
   }
   .hero-text h1 {
-    font-size: 3rem;   /* mai mic decât 4rem de pe desktop, ca să nu iasă în afară */
+    font-size: 3rem;   
   }
   .hero-text h2 {
-    font-size: 1.2rem; /* mai mic pentru subtitlu */
+    font-size: 1.2rem; 
   }
 }
 
@@ -170,7 +142,7 @@ background: radial-gradient(circle,rgba(220, 160, 109, 1) 31%, rgba(165, 91, 75,
 }
 .about-text h2 {
   margin: 0;
-  color: #4E1C51;              /* mid purple */
+  color: #4E1C51;            
   font-family: 'Montserrat', sans-serif;
 }
 .about-text p {
@@ -181,39 +153,11 @@ background: radial-gradient(circle,rgba(220, 160, 109, 1) 31%, rgba(165, 91, 75,
   font-weight: 600;
 }
 
-/* SKILLS BARS */
-.skills-bar-section {
-  max-width: 700px;
-  margin: 0 auto 4rem;
-  padding: 0 1rem;
-}
-.skills-bar-section h2 {
-  text-align: center;
-  color: #210F37;
-  margin-bottom: 2rem;
-}
-.skill-bar {
-  margin-bottom: 1.5rem;
-}
-.skill-name {
-  display: block;
-  margin-bottom: 0.3rem;
-  color: #210F37;
-  font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
-}
-.bar {
-  background-color: #EEEEEE;
-  height: 12px;
-  border-radius: 999px;
-  overflow: hidden;
-}
-.fill {
-  width: 0;
-  height: 100%;
-  background-color: #A5584B;
-  transition: width 1s ease;
-}
+/* SKILLS  */
+
+
+
+
 
 /* HOBBIES CARDS */
 .hobbies-section {
